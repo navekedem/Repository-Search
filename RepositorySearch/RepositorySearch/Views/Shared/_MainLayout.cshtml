@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Scripts/MyStylesIndex.css" />
+    <link rel="stylesheet" href="~/Scripts/MyStyles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a class="headline">GitHub Repositories Search Page</a></li>
+            <li>
+                <a class="homelink" href="@Url.Action("Index", "Home")">
+                    Home
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+    <div>
+       
+        @RenderBody()
+    </div>
+
+    
+</body>
+</html>

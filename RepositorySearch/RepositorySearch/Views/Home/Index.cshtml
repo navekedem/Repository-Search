@@ -1,0 +1,21 @@
+﻿
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+
+}
+
+<div>
+    <h3 class="index-headline">Search Here!</h3>
+    <form method="get" action="@Url.Action("GetRepo", "Home")">
+        @Html.TextBox("name")
+        <input type="submit" value="Search" />
+    </form> 
+
+</div>
+<div class="repos">
+   @Html.Action("DisplayReposList","Home")
+</div>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
