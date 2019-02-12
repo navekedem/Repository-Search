@@ -22,7 +22,7 @@ namespace RepositorySearch.Controllers
             
         }
 
-        //get search name for repository
+        //get search name for repository and update list
         [HttpGet]
         public ActionResult GetRepo(string name)
         {
@@ -50,12 +50,13 @@ namespace RepositorySearch.Controllers
             return PartialView("PartialRepos",repositories);
         }
 
+        //add repository to the user bookmarks 
         [HttpGet]
         public ActionResult AddBookMark(int id)
         {
             appManager.AddBookmark(id);
-            //Session["Guest"] = appManager.MyBookmarks;
             return View("Index");
+          
         }
 
         //bookmark page

@@ -1,6 +1,6 @@
 ﻿using Backend.BusinessLogic;
 using Backend.Models;
-using RepositorySearch.Models;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +19,7 @@ namespace RepositorySearch
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
-
+        //add session to user
         protected void Application_AcquireRequestState(object sender, EventArgs e)
         {
             HttpContext context = HttpContext.Current;
