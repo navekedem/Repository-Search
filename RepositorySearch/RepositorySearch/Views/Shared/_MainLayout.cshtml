@@ -4,9 +4,12 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/Scripts/MyStylesIndex.css" />
     <link rel="stylesheet" href="~/Scripts/MyStyles.css" />
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    @RenderSection("IndexStyle", false)
+    @RenderSection("BookmarkStyle", false)
+
 </head>
 <body>
     <div>
@@ -17,10 +20,15 @@
                     Home
                 </a>
             </li>
+            <li>
+                <a class="homelink" href="@Url.Action("BookmarksPage", "Home")">
+                    My Bookmarks
+                </a>
+            </li>
         </ul>
     </div>
     
-    <div>
+    <div class="Main">
        
         @RenderBody()
     </div>

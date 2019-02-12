@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Bookmarks";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+@section Bookmarkstyle{
+   <link href="~/Scripts/MyStyleBookmark.css" rel="stylesheet" />
+}
+
+<div class="bookmarks">
+    @Html.Action("DisplayBookmarks", "Home")
+</div>
+
+
+

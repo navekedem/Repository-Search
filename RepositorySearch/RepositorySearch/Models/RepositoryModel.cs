@@ -6,15 +6,15 @@ using System.Web;
 
 namespace RepositorySearch.Models
 {
-    public class RepositoryModel
-    {
-        [JsonProperty("id")]
-        internal int Id { get; set; }
-        [JsonProperty("name")]
-        public string RepositoryName { get; set; }
-        [JsonProperty("owner")]
-        public OwnerModel Owner { get; set; }
-        internal bool IsBookmark { get; set; }
+    //public class RepositoryModel
+    //{
+    //    [JsonProperty("id")]
+    //    public int Id { get; set; }
+    //    [JsonProperty("name")]
+    //    public string RepositoryName { get; set; }
+    //    [JsonProperty("owner")]
+    //    public OwnerModel Owner { get; set; }
+    //    public bool IsBookmark { get; set; }
 
-    }
+    //}
 }

@@ -5,17 +5,23 @@
     Layout = "~/Views/Shared/_MainLayout.cshtml";
 
 }
+@section IndexStyle{
 
-<div>
+    <link rel="stylesheet" href="~/Scripts/MyStylesIndex.css" />
+
+}
+<div class="header">
     <h3 class="index-headline">Search Here!</h3>
     <form method="get" action="@Url.Action("GetRepo", "Home")">
         @Html.TextBox("name")
-        <input type="submit" value="Search" />
-    </form> 
-
+        <input type="submit" value="Search" class="submit" />
+    </form>
 </div>
+
 <div class="repos">
-   @Html.Action("DisplayReposList","Home")
+
+
+    @Html.Action("DisplayReposList", "Home")
+
 </div>
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">

@@ -1,5 +1,9 @@
 ﻿body {
 }
+.Main {
+    display: flex;
+    justify-content: center;
+}
 a {
    
     font-family: 'Oswald', sans-serif;

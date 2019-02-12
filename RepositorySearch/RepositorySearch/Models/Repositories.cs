@@ -6,9 +6,9 @@ using System.Web;
 
 namespace RepositorySearch.Models
 {
-    public class Repositories
-    {
-        [JsonProperty("items")]
-        public List<RepositoryModel> repositories { get; set; }
-    }
+    //public class Repositories
+    //{
+    //    [JsonProperty("items")]
+    //    public List<RepositoryModel> repositories { get; set; }
+    //}
 }

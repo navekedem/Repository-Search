@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Backend.Models.RepositoryModel>
+
+@section IndexStyle{
+    <link rel="stylesheet" href="~/Scripts/MyStylesIndex.css" />
+}
+
+@if (Model.Count() > 0)
+{
+    foreach (var repo in Model)
+    {
+        <div class="card">
+            <img src="@repo.Owner.AvatarUrlPath" alt="Avatar" />
+            <div class="repo-info">
+                <h4><b>@repo.RepositoryName</b></h4>
+                <input type="button" value="Bookmark" onclick="location.href='@Url.Action("AddBookMark", "Home",new {id = repo.Id })'" @{ if (repo.IsBookmark == true) { @: disabled="disabled"
+                       } } />
+
+            </div>
+
+        </div>
+    }
+}
+else
+{
+    <h2>No Repositories found</h2>
+}
