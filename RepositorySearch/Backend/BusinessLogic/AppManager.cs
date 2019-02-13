@@ -1,4 +1,5 @@
-﻿using Backend.Models;
+﻿using Backend.Interfaces;
+using Backend.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Backend.BusinessLogic
 {
-    public class AppManager
+    public class AppManager : IAppManager
     {
         public List<RepositoryModel> repositoryModels { get; set; }
         public List<RepositoryModel> MyBookmarks { get; set; }
