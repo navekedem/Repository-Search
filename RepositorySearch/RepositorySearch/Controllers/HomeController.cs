@@ -51,7 +51,7 @@ namespace RepositorySearch.Controllers
         }
 
         //add repository to the user bookmarks 
-        [HttpGet]
+       
         public ActionResult AddBookMark(int id)
         {
             appManager.AddBookmark(id);
@@ -65,6 +65,7 @@ namespace RepositorySearch.Controllers
             return View("Bookmarks");
            
         }
+
         //display bookmarks repostories from session 
         public ActionResult DisplayBookmarks()
         {
