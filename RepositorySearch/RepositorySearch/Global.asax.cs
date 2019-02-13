@@ -19,7 +19,8 @@ namespace RepositorySearch
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
-        //add session to user
+
+        //add session to the user
         protected void Application_AcquireRequestState(object sender, EventArgs e)
         {
             HttpContext context = HttpContext.Current;

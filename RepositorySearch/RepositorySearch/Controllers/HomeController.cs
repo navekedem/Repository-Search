@@ -51,13 +51,14 @@ namespace RepositorySearch.Controllers
         }
 
         //add repository to the user bookmarks 
-       
+
         public ActionResult AddBookMark(int id)
         {
             appManager.AddBookmark(id);
             return View("Index");
-          
         }
+       
+          
 
         //bookmark page
         public ActionResult BookmarksPage()
